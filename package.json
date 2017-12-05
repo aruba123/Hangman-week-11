@@ -1,0 +1,23 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aruba123/Hangman-week-11.git"
+  },
+  "keywords": [
+    "hangman",
+    "game"
+  ],
+  "author": "Aruba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aruba123/Hangman-week-11/issues"
+  },
+  "homepage": "https://github.com/aruba123/Hangman-week-11#readme"
+}

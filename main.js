@@ -38,27 +38,31 @@ var Game  = new Game (wordBank);
 
 var generatedWord = Game.pickRandomWord();
 
+console.log(generatedWord)
+
 // setting variable word to a new instance of Word and passing the generated word into it
 
-var Word = new Word (generatedWord);
+var word = new Word (generatedWord);
+
+console.log(word)
 
 //setting the variable index to the index of the generated word 
 
 var index = wordBank.indexOf(generatedWord);
 
 
-// ====== GAME FUNCTIONS ======
-function printInfo() {
-    console.log('\033c');
-    console.log("\nWelcome to terminal hangman!\n".bold.red + "\nToday's catagory is " + "medical words".rainbow + "\n");
-    console.log("\n***********************************************".green);
-    console.log("|                                             |".green);
-    console.log("|".green + "  You current word: ".red + word.displayWord().magenta);
-    console.log("|                                             |".green);
-    console.log("***********************************************".green + "\n");
-    console.log("Guesses remaining: ".blue + guessesLeft + " | " + "Letters Guessed: ".blue + lettersGuessed.join(" ").rainbow + "\n");
-    console.log("Wins: ".green + wins + " | " + "Losses: ".yellow + losses + "\n");
-}
+// // ====== GAME FUNCTIONS ======
+// function printInfo() {
+//     console.log('\033c');
+//     console.log("\nWelcome to terminal hangman!\n".bold.red + "\nToday's catagory is " + "medical words".rainbow + "\n");
+//     console.log("\n***********************************************".green);
+//     console.log("|                                             |".green);
+//     console.log("|".green + "  You current word: ".red + word.displayWord().magenta);
+//     console.log("|                                             |".green);
+//     console.log("***********************************************".green + "\n");
+//     console.log("Guesses remaining: ".blue + guessesLeft + " | " + "Letters Guessed: ".blue + lettersGuessed.join(" ").rainbow + "\n");
+//     console.log("Wins: ".green + wins + " | " + "Losses: ".yellow + losses + "\n");
+// }
 
 // function that re-intializes the word after a word is guessed or guesses run out
 function gameReset() {
@@ -147,7 +151,7 @@ function incorrectWord() {
 
 
 // ============== PLAY GAME ============
-printInfo();
+//printInfo();
 
 // Start the game using inquirer
 function guess() {
@@ -169,6 +173,7 @@ function guess() {
         if (guessesLeft > 1) {
             // calls the playerGuess function and shows the letter if correctly guessed
             word.playerGuess(userGuess);
+            console.log(playerGuess)
 
             // checks to see if the letter guess is already in the lettersGuessed array if not push it to the array
             if (lettersGuessed.indexOf(userGuess) === -1) {

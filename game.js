@@ -35,10 +35,10 @@ module.exports = Game;
 //  // Setting the function randomWord to the initial pick and will call in main.js file 
 // // currentWordBank = randomWord().split("");
 
-// // var blanksArray =[];
-// // // for each loop to create an array of "_"
-// // currentWorBank.forEach(function(letter, index){
-// // 	blanksArray.push("_");
+//var blanksArray =[];
+ //for each loop to create an array of "_"
+//currentWorBank.forEach(function(letter, index){
+ 	//blanksArray.push("_");
 
 // // });
 // // var checker = new Word.CheckGuess(currentWordBank, blanksArray); 
